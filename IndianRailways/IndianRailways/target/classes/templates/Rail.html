@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Railways</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+<h1>Indian Railways</h1>
+
+<table>
+    <tr>
+        <th>Train No.</th>
+        <th>Train Name</th>
+        <th>islNo.</th>
+        <th>Station Code</th>
+        <th>Station Name</th>
+        <th>Arrival Time</th>
+        <th>Departure Time</th>
+        <th>Distance</th>
+        <th>Source Station Code</th>
+        <th>Source Station Name</th>
+        <th>Destination Station Code</th>
+        <th>Destination Station Name</th>
+    </tr>
+    <tr th:each="Train: ${Trains}">
+        <td th:text="${Train.TrainNo}"></td>
+        <td th:text="${Train.trainName}"></td>
+        <td th:text="${Train.islno}"></td>
+        <td th:text="${Train.stationCode}"></td>
+        <td th:text="${Train.StationName}"></td>
+        <td th:text="${Train.Arrivaltime}"></td>
+        <td th:text="${Train.Departuretime}"></td>
+        <td th:text="${Train.Distance}"></td>
+        <td th:text="${Train.SourceStationCode}"></td>
+        <td th:text="${Train.sourceStationName}">0</td>
+        <td th:text="${Train.DestinationstationCode}">0</td>
+        <td th:text="${Train.DestinationStationName}">0</td>
+    </tr>
+</table>
+
+</body>
+
+</html>
