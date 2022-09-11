@@ -1,6 +1,5 @@
 package com.Practice.IndianRailways;
 
-import javax.xml.soap.SAAJResult;
 
 public class RailModel {
     String TrainNo;
